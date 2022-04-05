@@ -5,6 +5,7 @@ import sys
 
 
 def main():
+    #os.system("pip install django")
     """Run administrative tasks."""
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'src.settings')
     try:
