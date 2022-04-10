@@ -1,0 +1,30 @@
+{% extends "static/b.html" %}
+{% block METADATA %} {% endblock METADATA%}
+{% block Content %}
+<div id="form-wrapper">
+   <link rel="stylesheet" href="/static?path=style/contact.css">
+   <form id="wraped-form" method="post" action="/contact_us"> {% csrf_token %}
+      <span>
+          <label for="subject"> Subject </label>
+              <input name="subject" type="text" id="subject">
+      </span>
+       
+      <span>
+          <label for="message"> message </label>
+              <input name="message" type="text" id="message">
+      </span>
+      
+       <span>
+          <label for="sender"> Your Email </label>
+              <input name= "sender" type="email" id="sender">
+      </span>
+      
+       <input name="send" type="submit" style="">
+      <!-- python form obj
+         subject = forms.CharField(max_length=100)
+         message = forms.CharField()
+         sender = forms.EmailField()
+       -->
+   </form>
+</div>
+{% endblock Content %}

@@ -1,33 +1,13 @@
 <div id="navbar">
-   
-    <nav class="navbar-container container">
-      <a href="/" class="home-link">
-        <div class="navbar-logo"></div>
-        ShowierData9978
-      </a>
-      <button type="button" id="navbar-toggle" aria-controls="navbar-menu" aria-label="Toggle menu" aria-expanded="false">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <div id="navbar-menu" aria-labelledby="navbar-toggle">
-        <ul class="navbar-links">
-          <li class="navbar-item"><a class="navbar-link" href="/about">About</a></li>
-          <li class="navbar-item"><a class="navbar-link" href="/blog">Blog</a></li>
-          <li class="navbar-item"><a class="navbar-link" href="/careers">Careers</a></li>
-          <li class="navbar-item"><a class="navbar-link" href="/contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-    <!-- screw it --> 
+    <!-- styles -->
     <style>
-        :root {
+        :root {  
   --navbar-bg-color: hsl(0, 0%, 15%);
   --navbar-text-color: hsl(0, 0%, 85%);
   --navbar-text-color-focus: white;
   --navbar-bg-contrast: hsl(0, 0%, 25%);
 }
-* {
+*  
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -37,14 +17,14 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
 }
-.container {
+.container {  
   max-width: 1000px;
   padding-left: 1.4rem;
   padding-right: 1.4rem;
   margin-left: auto;
   margin-right: auto;
 }
-#navbar {
+#navbar {  
   --navbar-height: 64px;
   position: fixed;
   height: var(--navbar-height);
@@ -53,19 +33,19 @@ body {
   right: 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
-.navbar-container {
+.navbar-container {  
   display: flex;
   justify-content: space-between;
   height: 100%;
   align-items: center;
 }
-.navbar-item {
+.navbar-item {  
   margin: 0.4em;
   width: 100%;
 }
 
 .home-link,
-.navbar-link {
+.navbar-link {  
   color: var(--navbar-text-color);
   text-decoration: none;
   display: flex;
@@ -73,29 +53,29 @@ body {
   align-items: center;
 }
 
-.home-link:is(:focus, :hover) {
+.home-link:is(:focus, :hover) {  
   color: var(--navbar-text-color-focus);
 }
 
-.navbar-link {
+.navbar-link {  
   justify-content: center;
   width: 100%;
   padding: 0.4em 0.8em;
   border-radius: 5px;
 }
 
-.navbar-link:is(:focus, :hover) {
+.navbar-link:is(:focus, :hover) {  
   color: var(--navbar-text-color-focus);
   background-color: var(--navbar-bg-contrast);
 }
-.navbar-logo {
+.navbar-logo {  
   background-color: var(--navbar-text-color-focus);
   border-radius: 50%;
   width: 30px;
   height: 30px;
   margin-right: 0.5em;
 }
-#navbar-toggle {
+#navbar-toggle {  
   cursor: pointer;
   border: none;
   background-color: transparent;
@@ -113,10 +93,10 @@ body {
   margin: 2px;
   background-color: var(--navbar-text-color);
 }
-#navbar-toggle:is(:focus, :hover) .icon-bar {
+#navbar-toggle:is(:focus, :hover) .icon-bar {  
   background-color: var(--navbar-text-color-focus);
 }
-#navbar-toggle[aria-expanded="true"] .icon-bar:is(:first-child, :last-child) {
+#navbar-toggle[aria-expanded="true"] .icon-bar:is(:first-child, :last-child) {  
   position: absolute;
   margin: 0;
   width: 30px;
@@ -187,21 +167,25 @@ body {
     height: 100%;
   }
 }
+    
+
     </style>
-    <script>
-const navbarToggle = navbar.querySelector("#navbar-toggle");
-const navbarMenu = document.querySelector("#navbar-menu");
-const navbarLinksContainer = navbarMenu.querySelector(".navbar-links");
-let isNavbarExpanded = navbarToggle.getAttribute("aria-expanded") === "true";
-
-const toggleNavbarVisibility = () => {
-  isNavbarExpanded = !isNavbarExpanded;
-  navbarToggle.setAttribute("aria-expanded", isNavbarExpanded);
-};
-
-navbarToggle.addEventListener("click", toggleNavbarVisibility);
-
-navbarLinksContainer.addEventListener("click", (e) => e.stopPropagation());
-navbarMenu.addEventListener("click", toggleNavbarVisibility);
-    </script>
-</div>
+    <!-- main HTML -->
+    <nav class="navbar-container container">
+      <a href="/" class="home-link">
+        <div class="navbar-logo"></div>
+        ShowierData9978
+      </a>
+      <button type="button" id="navbar-toggle" aria-controls="navbar-menu" aria-label="Toggle menu" aria-expanded="false">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div id="navbar-menu" aria-labelledby="navbar-toggle">
+        <ul class="navbar-links">
+          <li class="navbar-item"><a class="navbar-link" href="/about">About</a></li>
+          <li class="navbar-item"><a class="navbar-link" href="/contact_us">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
