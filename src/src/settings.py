@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-nq@hz5um7+5x=5ii=90izek7xc_s+)7tl+su_00+^^gm8_4z#m
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["website.showierdata9978.repl.co","dfe0cf67-15b7-4e3d-a715-8377239ef1f1.id.repl.co"]
+ALLOWED_HOSTS = ["website.showierdata9978.repl.co","dfe0cf67-15b7-4e3d-a715-8377239ef1f1.id.repl.co","localhost"]
 
 
 # Application definition

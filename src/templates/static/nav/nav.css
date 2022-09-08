@@ -1,10 +1,10 @@
-:root { !important
+:root {  
   --navbar-bg-color: hsl(0, 0%, 15%);
   --navbar-text-color: hsl(0, 0%, 85%);
   --navbar-text-color-focus: white;
   --navbar-bg-contrast: hsl(0, 0%, 25%);
 }
-*  
+* { 
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -14,14 +14,14 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
 }
-.container { !important
+.container {  
   max-width: 1000px;
   padding-left: 1.4rem;
   padding-right: 1.4rem;
   margin-left: auto;
   margin-right: auto;
 }
-#navbar { !important
+#navbar {  
   --navbar-height: 64px;
   position: fixed;
   height: var(--navbar-height);
@@ -30,19 +30,19 @@ body {
   right: 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
-.navbar-container { !important
+.navbar-container {  
   display: flex;
   justify-content: space-between;
   height: 100%;
   align-items: center;
 }
-.navbar-item { !important
+.navbar-item {  
   margin: 0.4em;
   width: 100%;
 }
 
 .home-link,
-.navbar-link { !important
+.navbar-link {  
   color: var(--navbar-text-color);
   text-decoration: none;
   display: flex;
@@ -50,29 +50,29 @@ body {
   align-items: center;
 }
 
-.home-link:is(:focus, :hover) { !important
+.home-link:is(:focus, :hover) {  
   color: var(--navbar-text-color-focus);
 }
 
-.navbar-link { !important
+.navbar-link {  
   justify-content: center;
   width: 100%;
   padding: 0.4em 0.8em;
   border-radius: 5px;
 }
 
-.navbar-link:is(:focus, :hover) { !important
+.navbar-link:is(:focus, :hover) {  
   color: var(--navbar-text-color-focus);
   background-color: var(--navbar-bg-contrast);
 }
-.navbar-logo { !important
+.navbar-logo {  
   background-color: var(--navbar-text-color-focus);
   border-radius: 50%;
   width: 30px;
   height: 30px;
   margin-right: 0.5em;
 }
-#navbar-toggle { !important
+#navbar-toggle {  
   cursor: pointer;
   border: none;
   background-color: transparent;
@@ -90,10 +90,10 @@ body {
   margin: 2px;
   background-color: var(--navbar-text-color);
 }
-#navbar-toggle:is(:focus, :hover) .icon-bar { !important
+#navbar-toggle:is(:focus, :hover) .icon-bar {  
   background-color: var(--navbar-text-color-focus);
 }
-#navbar-toggle[aria-expanded="true"] .icon-bar:is(:first-child, :last-child) { !important
+#navbar-toggle[aria-expanded="true"] .icon-bar:is(:first-child, :last-child) {  
   position: absolute;
   margin: 0;
   width: 30px;
@@ -165,7 +165,3 @@ body {
   }
 }
     
-body {
-        background-color: rgba(0, 0, 0, 4);
-        color: rgba(0,0,0,100) !Important;
-}

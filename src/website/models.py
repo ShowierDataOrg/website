@@ -5,11 +5,6 @@ from django.db import models
 
 class Contacted(models.Model):
     subject = models.CharField(max_length=100)
-    message = models.CharField()
+    message = models.CharField(max_length=600)
     sender = models.EmailField()
-    uuid = models.UUIDField('id')
-    
-    class Meta:
-      app_label = 'Contact_me_MSG'
-      db_table = 'contactme'
-      abstract = False
+    uuid = models.IntegerField('id' ,primary_key=True)

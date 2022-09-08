@@ -1,7 +1,8 @@
 from django.http import HttpResponse
 from django.shortcuts import render,redirect
 import uuid
-from . import admin as models
+from . import admin 
+from . import models
 from . import forms
 from django.template.exceptions import TemplateDoesNotExist 
 
@@ -24,12 +25,13 @@ def contactme(request:HttpResponse):
     
         form = forms.ContactForm(r)
         ctx = form.visible_fields()
-        db = models.Contacted
-        db.objects.create(
-            uuid = uuid.uuid4(),
-            subject =ctx['1'] ,
-            message=ctx[2],
-            sender=ctx[3]
+        
+        db = models.Contacted(
+            
+            r["subject"][0] ,
+            r["message"][0],
+            r["sender"][0],
+           
         )
         
         db.save()
