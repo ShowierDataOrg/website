@@ -13,8 +13,13 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 from pathlib import Path
 import os
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -22,16 +27,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-nq@hz5um7+5x=5ii=90izek7xc_s+)7tl+su_00+^^gm8_4z#m'
-
+SECRET_KEY = os.environ["SENV_KEY"]
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ["website.showierdata9978.repl.co","dfe0cf67-15b7-4e3d-a715-8377239ef1f1.id.repl.co","localhost"]
+ALLOWED_HOSTS = ["showierdata.tech","localhost"]
 
 
 # Application definition
 
+SITE_ID = 1
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -40,8 +45,17 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'website'
+    'django.contrib.sitemaps',
+    'django.contrib.sites',
+    'website',
+    'robots'
 ]
+
+ROBOTS_SITEMAP_URLS = [
+    'http://showierdata.tech/sitemap.xml',
+]
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -121,9 +135,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
-CSRF_TRUSTED_ORIGINS = ['https://website.showierdata9978.repl.co']
+CSRF_TRUSTED_ORIGINS = ['http://localhost', 'https://showierdata.tech']
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
+
 STATIC_ROOT = f'{BASE_DIR}/templates/static'
 CSRF_COOKIE_SECURE = True
 

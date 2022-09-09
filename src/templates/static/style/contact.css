@@ -1,8 +1,26 @@
-form-wrapper {
+#form-wrapper {
+    outline-color: lightcoral;
+    size: 100%;
     position: center;
-    
+    text-align: center;
+    flex-wrap: wrap;
+    outline-style:auto;
+    outline:12rem;
 }
-wraped-form {
+
+
+
+#wraped-form {
+    outline-color: lightcoral;
+    size: 100%;
     position: center;
-    
+    text-align: center;
 }
+
+#wrapped-form form { 
+    width: 25% !important;
+    height: 75% !important;
+    display: table !important;
+    position: center !important;
+}
+
