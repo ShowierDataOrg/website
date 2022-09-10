@@ -16,8 +16,7 @@ def static(request:HttpResponse):
         return render(request,f"static/{request.GET.get('path', '')}")
     except (TemplateDoesNotExist , AttributeError,Exception) as e:
         return 404, (f"{request.GET.get('path', '')} does not exist") 
-def about_me(request:HttpResponse):
-    return render(request,'about.html')
+
 def contactme(request:HttpResponse):
     if request.POST:
         print(request.POST)

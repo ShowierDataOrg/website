@@ -1,2 +1,6 @@
+<<<<<<< HEAD
 Django==4.0.6
 django-robots>=4.0.0
+=======
+Django==4.0.7
+>>>>>>> 6f7d58f5027afa17dfa173a0b91e21357c549f1a
